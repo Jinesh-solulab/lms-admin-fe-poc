@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --border: #eceef1;
+  --ink-muted: #6b7280;
+  --brand: #0f766e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+/* Layout */
+.app-sider {
+  border-inline-end: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 20;
+}
+
+.app-header {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-content {
+  padding: 24px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    padding: 16px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.brand-title {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.page-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.center-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* Login */
+.login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.login-lang {
+  position: absolute;
+  top: 16px;
+  inset-inline-end: 16px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Part-to-whole status bar: 2px surface gap between segments, rounded ends */
+.status-bar {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.status-bar-seg {
+  flex-basis: 0;
+  min-width: 4px;
+  height: 100%;
+}
+
+.status-bar-empty {
+  flex: 1;
+  height: 100%;
+  background: var(--border);
+}
+
+.video-preview {
+  width: 100%;
+  max-height: 320px;
+  background: #000;
+  border-radius: 8px;
+  display: block;
+}
